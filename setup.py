@@ -1,26 +1,19 @@
 from setuptools import setup
 
 setup(
-    name             = 'chris-plugin-template',
+    name             = 'dbg-nvidia-smi',
     version          = '1.0.0',
-    description      = 'A ChRIS DS plugin template',
+    description      = 'A ChRIS fs plugin wrapper for nvidia-smi',
     author           = 'FNNDSC',
     author_email     = 'dev@babyMRI.org',
-    url              = 'https://github.com/FNNDSC/python-chrisapp-template',
-    py_modules       = ['app'],
-    install_requires = ['chris_plugin'],
+    url              = 'https://github.com/FNNDSC/dbg-nvidia-smi',
+    py_modules       = ['nvwrapper'],
+    install_requires = ['chris_plugin~=0.0.5'],
     license          = 'MIT',
     python_requires  = '>=3.10.2',
     entry_points     = {
         'console_scripts': [
-            'commandname = app:main'
+            'nvidia-smi-wrapper = nvwrapper:main'
             ]
-        },
-    classifiers      = [
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.10',
-        'Topic :: Scientific/Engineering',
-        'Topic :: Scientific/Engineering :: Bio-Informatics',
-        'Topic :: Scientific/Engineering :: Medical Science Apps.'
-    ]
+        }
 )
