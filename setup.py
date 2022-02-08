@@ -8,7 +8,7 @@ setup(
     author_email     = 'dev@babyMRI.org',
     url              = 'https://github.com/FNNDSC/dbg-nvidia-smi',
     py_modules       = ['nvwrapper'],
-    install_requires = ['chris_plugin~=0.0.7'],
+    install_requires = ['chris_plugin~=0.0.9'],
     license          = 'MIT',
     python_requires  = '>=3.8.2',
     entry_points     = {
