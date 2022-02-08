@@ -12,9 +12,9 @@ LABEL org.opencontainers.image.authors="FNNDSC <dev@babyMRI.org>" \
       org.opencontainers.image.title="dbg-nvidia-smi" \
       org.opencontainers.image.description="A ChRIS fs plugin wrapper around nvidia-smi"
 
-WORKDIR /usr/local/src/app
+WORKDIR /usr/local/src/dbg-nvidia-smi
 
 COPY . .
-RUN pip install --use-feature=in-tree-build .
+RUN pip install .
 
 CMD ["nvidia-smi-wrapper", "--help"]
