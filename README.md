@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/docker/v/fnndsc/dbg-nvidia-smi?sort=semver)](https://hub.docker.com/r/fnndsc/dbg-nvidia-smi)
 [![MIT License](https://img.shields.io/github/license/fnndsc/dbg-nvidia-smi)](https://github.com/FNNDSC/dbg-nvidia-smi/blob/main/LICENSE)
-[![Build](https://github.com/FNNDSC/dbg-nvidia-smi/actions/workflows/ci.yml/badge.svg)](https://github.com/FNNDSC/dbg-nvidia-smi/actions)
+[![Build](https://github.com/FNNDSC/dbg-nvidia-smi/actions/workflows/build.yml/badge.svg)](https://github.com/FNNDSC/dbg-nvidia-smi/actions)
 
 `dbg-nvidia-smi` is a _ChRIS_ fs plugin wrapper around the command `nvidia-smi`.
 
