@@ -29,6 +29,7 @@ parser.add_argument('-q', '--query-gpu', type=str, dest='query_gpu',
     title='NVIDIA-SMI Wrapper',
     category='Troubleshooting',
     min_gpu_limit=1,
+    max_gpu_limit=9999,  # required by CUBE @ b3b9996
     parser=parser
 )
 def main(options: argparse.Namespace, outputdir: Path):

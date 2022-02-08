@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name             = 'dbg-nvidia-smi',
-    version          = '1.0.0',
+    version          = '1.0.1',
     description      = 'A ChRIS fs plugin wrapper for nvidia-smi',
     author           = 'FNNDSC',
     author_email     = 'dev@babyMRI.org',
