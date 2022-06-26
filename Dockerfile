@@ -5,7 +5,7 @@
 #
 #     docker build --build-arg BASE=python:3.10.2-slim .
 #
-ARG BASE=docker.io/fnndsc/conda:cuda-fallback
+ARG BASE=docker.io/fnndsc/conda:python3.10.5-cuda11.6.0
 FROM ${BASE}
 
 LABEL org.opencontainers.image.authors="FNNDSC <dev@babyMRI.org>" \
