@@ -17,4 +17,4 @@ WORKDIR /usr/local/src/dbg-nvidia-smi
 COPY . .
 RUN pip install .
 
-CMD ["nvidia-smi-wrapper", "--help"]
+CMD ["nvidia-smi-wrapper", "--man", "/tmp"]
