@@ -7,6 +7,13 @@ import subprocess as sp
 from pathlib import Path
 from chris_plugin import chris_plugin
 
+
+from importlib_metadata import distribution
+dist = distribution('dbg-nvidia-smi')
+
+__version__ = dist.version
+__name__    = dist.name
+
 DISPLAY_TITLE = r"""
      _ _                             _     _ _                            _
     | | |                           (_)   | (_)                          (_)
@@ -114,6 +121,11 @@ parser.add_argument('--report',
                     dest    = 'report',
                     default = 'gpus.csv',
                     help    = 'Report filename.')
+parser.add_argument('--version',
+                    help    = 'if specified, print version number',
+                    dest    = 'b_version',
+                    action  = 'store_true',
+                    default = False)
 
 @chris_plugin(
     title           = 'NVIDIA-SMI Wrapper',
@@ -126,6 +138,10 @@ def main(options: argparse.Namespace, outputdir: Path):
 
     if options.man:
         print(synopsis())
+        sys.exit(1)
+
+    if options.b_version:
+        print("Name:    %s\nVersion: %s" % (__name__, __version__))
         sys.exit(1)
 
     if not shutil.which('nvidia-smi'):
