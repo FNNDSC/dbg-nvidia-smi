@@ -9,6 +9,11 @@
 ## Usage
 
 ```shell
+
+# To get detailed usage/man page instruction, pass a
+# --man argument to the 'nvidia-smi-wrapper' in the
+# examples below.
+
 # Apptainer
 singularity exec --nv docker://ghcr.io/fnndsc/dbg-nvidia-smi:lite \
     sh -c 'nvidia-smi-wrapper /tmp --cat'
